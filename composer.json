@@ -1,33 +1,35 @@
 {
-    "authors": [
-        {
-            "homepage": "http://drteam.rocks/",
-            "email": "paul@drteam.rocks",
-            "name": "Paul Rock",
-            "role": "Developer"
-        }
-    ],
-    "autoload": {
-        "psr-4": {
-            "HaipIT\\": "src/"
-        }
-    },
-    "description": "HaipIT News RESTful API Client",
-    "homepage": "https://haipit.news/",
-    "keywords": [
-        "haipit",
-        "rest-api"
-    ],
-    "license": "MIT",
-    "minimum-stability": "stable",
-    "name": "haipit/haipit-php",
-    "require": {
-        "php": ">=5.4",
-        "ext-curl": "*",
-        "guzzlehttp/guzzle": "^6.0"
-    },
-    "require-dev": {
-        "phpunit/phpunit": "^5.7"
-    },
-    "type": "library"
+  "authors": [
+    {
+      "homepage": "https://drteam.rocks/",
+      "email": "paul@drteam.rocks",
+      "name": "Paul Rock",
+      "role": "Developer"
+    }
+  ],
+  "autoload": {
+    "psr-4": {
+      "Haipit\\Client\\": "./src/"
+    }
+  },
+  "description": "HaipIT News RESTful API Client",
+  "homepage": "https://haipit.news/",
+  "keywords": [
+    "haipit",
+    "rest-api",
+    "restful",
+    "client"
+  ],
+  "license": "MIT",
+  "minimum-stability": "stable",
+  "name": "haipit/haipit-php",
+  "require": {
+    "php": "^7.0",
+    "ext-curl": "*",
+    "guzzlehttp/guzzle": "^6.0"
+  },
+  "require-dev": {
+    "phpunit/phpunit": "^7.0"
+  },
+  "type": "library"
 }

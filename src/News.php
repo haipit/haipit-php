@@ -1,46 +1,50 @@
-<?php namespace HaipIT;
+<?php
+
+namespace Haipit\Client;
 
 /**
  * Class News
- * @package DrMVC\App\Models
  */
 class News extends Client
 {
-    public function get($id = null, $parameters = array())
+
+    /**
+     * Get list of last news or single news by ID
+     *
+     * @param   null|string $id
+     * @param   array $parameters
+     * @return  array|false
+     */
+    public function get($id = null, array $parameters = [])
     {
         $endpoint = '/news';
 
-        if (!empty($id))
+        if (null !== $id) {
             $endpoint .= '/' . $id;
+        }
 
-        if (!empty($parameters) && is_array($parameters))
+        if (!empty($parameters) && \is_array($parameters)) {
             $endpoint .= $this->compileURL($parameters);
+        }
 
         return $this->doRequest('get', $endpoint);
     }
 
-    public function random($parameters = array())
+    /**
+     * Get random news from database
+     *
+     * @param   array $parameters
+     * @return  array|false
+     */
+    public function random(array $parameters = [])
     {
         $endpoint = '/news/random';
 
-        if (!empty($parameters) && is_array($parameters))
+        if (!empty($parameters) && \is_array($parameters)) {
             $endpoint .= $this->compileURL($parameters);
+        }
 
         return $this->doRequest('get', $endpoint);
     }
 
-    public function find($parameters)
-    {
-        // Add the default platform
-        $parameters['platform'] = 'haipit-php';
-
-        $endpoint = '/find';
-
-        if (!empty($parameters) && is_array($parameters))
-            $endpoint .= $this->compileURL($parameters);
-
-        $result = $this->doRequest('get', $endpoint);
-
-        return $result;
-    }
 }

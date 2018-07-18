@@ -1,4 +1,6 @@
-<?php namespace HaipIT;
+<?php
+
+namespace HaipIT;
 
 use PHPUnit\Framework\TestCase;
 

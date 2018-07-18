@@ -4,6 +4,7 @@ namespace Haipit\Client;
 
 /**
  * Class Sources
+ * @package Haipit\Client
  */
 class Sources extends Client
 {

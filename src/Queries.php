@@ -4,6 +4,7 @@ namespace Haipit\Client;
 
 /**
  * Class Queries
+ * @package Haipit\Client
  */
 class Queries extends Client
 {

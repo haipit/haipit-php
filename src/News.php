@@ -4,6 +4,7 @@ namespace Haipit\Client;
 
 /**
  * Class News
+ * @package Haipit\Client
  */
 class News extends Client
 {

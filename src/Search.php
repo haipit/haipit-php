@@ -2,14 +2,18 @@
 
 namespace Haipit\Client;
 
-class Search
+/**
+ * Class Search
+ * @package Haipit\Client
+ */
+class Search extends Client
 {
 
     /**
      * @param   array $parameters
      * @return  array|false
      */
-    public function get($keywords = null, array $parameters = [])
+    public function get(array $parameters = [])
     {
         // Add the default platform
         $parameters['platform'] = 'haipit-php';

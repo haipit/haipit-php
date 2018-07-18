@@ -5,6 +5,10 @@ namespace Haipit\Client;
 use GuzzleHttp\Client as HttpClient;
 use Haipit\Client\Interfaces\ClientInterface;
 
+/**
+ * Class Client
+ * @package Haipit\Client
+ */
 class Client implements ClientInterface
 {
 
